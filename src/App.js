@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { ReactComponent as Logo } from './images/logo.svg';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Search from './Redux/connection'
+import Details from './movieDetails'
+import { Provider } from 'react-redux';
+import storeDetails from './Redux/store';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='mainMargin'>
+      <div className='flex navBarGap alignCenter '>
+        <Logo />
+        <h3>MovieSearch</h3>
+      </div>
+      <Provider store={storeDetails}>
+        <BrowserRouter>
+          <div>
+            <Routes>
+              <Route path='/SCB_Task' element={<Search />} />
+              <Route path='/SCB_Task/:id' element={<Details />} />
+            </Routes>
+          </div>
+        </BrowserRouter>
+      </Provider>
+
+
     </div>
   );
 }

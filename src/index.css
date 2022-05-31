@@ -11,3 +11,196 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.grid {
+  display: grid;
+}
+
+.gridAutoFitImage {
+  grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+  grid-gap: 8px;
+}
+
+.gridWithDivider {
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  grid-gap: 8px;
+}
+
+.gridWithImageComp {
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  grid-gap: 8px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flexColumn{
+  flex-direction: column;
+}
+
+.allCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navBarGap {
+  gap: 20px;
+}
+
+.alignCenter {
+  align-items: center;
+}
+
+.alignEnd {
+  align-items: end;
+}
+
+.spaceBetween{
+  justify-content: space-between;
+}
+
+.spaceAround{
+  justify-content: space-around;
+}
+
+.textAlignCenter {
+  text-align: center;
+}
+
+.searchBar {
+  gap: 5px;
+  background: #33394D;
+  border-radius: 12px;
+}
+
+.mainMargin {
+  margin: 20px;
+}
+
+.gridGap10 {
+  grid-gap: 10px;
+}
+
+.gridGap50 {
+  grid-gap: 50px;
+}
+
+.gridGap30{
+  grid-gap: 30px;
+}
+
+.gridColumns2 {
+  grid-template-columns: auto auto;
+}
+
+.gridColumns3 {
+  grid-template-columns: auto auto auto;
+}
+
+.margin0px {
+  margin: 0px;
+}
+
+.font48px{
+  font-size: 3rem;
+}
+
+.font24px{
+  font-size: 1.5rem;
+}
+
+.font18px{
+  font-size: 1.125rem;
+}
+
+.font16px{
+  font-size: 1rem;
+}
+
+.font14px{
+  font-size: 0.875rem;
+}
+
+.fontWeight700{
+  font-weight: 700;
+}
+
+.fontWeight600{
+  font-weight: 600;
+}
+
+.fontWeight500{
+  font-weight: 500;
+}
+
+.fontWeight400{
+  font-weight: 400;
+}
+
+.divider{
+  border-right: 1px solid #525B7A;
+  padding-right: 10px;
+}
+
+.fillAvailableWidth{
+  width: -webkit-fill-available;
+}
+
+.titleBlock{
+  display: flex;
+  grid-gap: 50px;
+  justify-content: space-between;
+}
+
+.ratingBlock{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.mainClass{
+  display: flex;
+  grid-gap: 30px;
+}
+
+.posterImageWidth{
+  height: 356px;
+}
+
+@media screen and (max-width: 640px) {
+  .titleBlock{
+    flex-direction: column;
+    grid-gap: 30px;
+  }
+
+  .ratingBlock{
+    align-items: flex-start;
+  }
+
+  .mainClass{
+    display: flex;
+    grid-gap: 30px;
+    flex-direction: column;
+  }
+
+  .posterImageWidth{
+    height: 356px;
+    width: fit-content;
+  }
+
+  .divider{
+    border-right: none;
+  }
+}
+
+.divider:last-child{
+  border-right: none;
+}
+
+@media screen and (max-width: 420px) {
+  .gridAutoFitImage {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
