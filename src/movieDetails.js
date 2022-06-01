@@ -60,9 +60,9 @@ const MovieDetails = () => {
                                 <img src={Star} />
                                 <p className="margin0px font14px fontWeight500">{details.Metascore}% Metascore</p>
                             </div>}
-                            {details.Website && <div className="flex alignCenter gridGap10">
+                            {details.Website!=='N/A' && <div className="flex alignCenter gridGap10">
                                 <Language />
-                                <a className="margin0px font14px fontWeight500" href={details.Website}> Website </a>
+                                <a className="margin0px font14px fontWeight500" target='_blank' href={details.Website}> Website </a>
                             </div>}
                         </div>
                     </div>
